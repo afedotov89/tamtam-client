@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.simple_query_result import SimpleQueryResult  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestSimpleQueryResult(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSimpleQueryResult(unittest.TestCase):
     def testSimpleQueryResult(self):
         """Test SimpleQueryResult"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.simple_query_result.SimpleQueryResult()  # noqa: E501
+        # model = tamtam_client.models.simple_query_result.SimpleQueryResult()  # noqa: E501
         pass
 
 

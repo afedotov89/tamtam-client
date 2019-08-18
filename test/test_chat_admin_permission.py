@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.chat_admin_permission import ChatAdminPermission  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestChatAdminPermission(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestChatAdminPermission(unittest.TestCase):
     def testChatAdminPermission(self):
         """Test ChatAdminPermission"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.chat_admin_permission.ChatAdminPermission()  # noqa: E501
+        # model = tamtam_client.models.chat_admin_permission.ChatAdminPermission()  # noqa: E501
         pass
 
 

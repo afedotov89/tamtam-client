@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.recipient import Recipient  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestRecipient(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestRecipient(unittest.TestCase):
     def testRecipient(self):
         """Test Recipient"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.recipient.Recipient()  # noqa: E501
+        # model = tamtam_client.models.recipient.Recipient()  # noqa: E501
         pass
 
 

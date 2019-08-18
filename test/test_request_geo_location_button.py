@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.request_geo_location_button import RequestGeoLocationButton  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestRequestGeoLocationButton(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestRequestGeoLocationButton(unittest.TestCase):
     def testRequestGeoLocationButton(self):
         """Test RequestGeoLocationButton"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.request_geo_location_button.RequestGeoLocationButton()  # noqa: E501
+        # model = tamtam_client.models.request_geo_location_button.RequestGeoLocationButton()  # noqa: E501
         pass
 
 

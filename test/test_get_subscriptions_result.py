@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.get_subscriptions_result import GetSubscriptionsResult  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestGetSubscriptionsResult(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestGetSubscriptionsResult(unittest.TestCase):
     def testGetSubscriptionsResult(self):
         """Test GetSubscriptionsResult"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.get_subscriptions_result.GetSubscriptionsResult()  # noqa: E501
+        # model = tamtam_client.models.get_subscriptions_result.GetSubscriptionsResult()  # noqa: E501
         pass
 
 

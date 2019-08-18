@@ -14,8 +14,8 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.object import Object  # noqa: F401,E501
-from swagger_client.models.user_with_photo import UserWithPhoto  # noqa: F401,E501
+from tamtam_client.models.object import Object  # noqa: F401,E501
+from tamtam_client.models.user_with_photo import UserWithPhoto  # noqa: F401,E501
 
 
 class ChatMember(UserWithPhoto):

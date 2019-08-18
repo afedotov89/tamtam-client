@@ -1,4 +1,4 @@
-# swagger_client.SubscriptionsApi
+# tamtam_client.SubscriptionsApi
 
 All URIs are relative to *https://botapi.tamtam.chat*
 
@@ -20,18 +20,18 @@ In case your bot gets data via WebHook, the method returns list of all subscript
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.SubscriptionsApi(tamtam_client.ApiClient(configuration))
 
 try:
     # Get subscriptions
@@ -70,18 +70,18 @@ You can use this method for getting updates in case your bot is not subscribed t
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.SubscriptionsApi(tamtam_client.ApiClient(configuration))
 limit = 56 # int | Maximum number of updates to be retrieved (optional)
 timeout = 56 # int | Timeout in seconds for long polling (optional)
 marker = 789 # int | Pass `null` to get updates you didn't get yet (optional)
@@ -130,19 +130,19 @@ Subscribes bot to receive updates via WebHook. After calling this method, the bo
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.SubscriptionRequestBody() # SubscriptionRequestBody | 
+api_instance = tamtam_client.SubscriptionsApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.SubscriptionRequestBody() # SubscriptionRequestBody | 
 
 try:
     # Subscribe
@@ -184,18 +184,18 @@ Unsubscribes bot from receiving updates via WebHook. After calling the method, t
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.SubscriptionsApi(tamtam_client.ApiClient(configuration))
 url = 'url_example' # str | URL to remove from WebHook subscriptions
 
 try:

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.send_message_result import SendMessageResult  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestSendMessageResult(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSendMessageResult(unittest.TestCase):
     def testSendMessageResult(self):
         """Test SendMessageResult"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.send_message_result.SendMessageResult()  # noqa: E501
+        # model = tamtam_client.models.send_message_result.SendMessageResult()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.video_attachment import VideoAttachment  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestVideoAttachment(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestVideoAttachment(unittest.TestCase):
     def testVideoAttachment(self):
         """Test VideoAttachment"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.video_attachment.VideoAttachment()  # noqa: E501
+        # model = tamtam_client.models.video_attachment.VideoAttachment()  # noqa: E501
         pass
 
 

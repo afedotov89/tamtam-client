@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.contact_attachment_request import ContactAttachmentRequest  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestContactAttachmentRequest(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestContactAttachmentRequest(unittest.TestCase):
     def testContactAttachmentRequest(self):
         """Test ContactAttachmentRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.contact_attachment_request.ContactAttachmentRequest()  # noqa: E501
+        # model = tamtam_client.models.contact_attachment_request.ContactAttachmentRequest()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.new_message_body import NewMessageBody  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestNewMessageBody(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestNewMessageBody(unittest.TestCase):
     def testNewMessageBody(self):
         """Test NewMessageBody"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.new_message_body.NewMessageBody()  # noqa: E501
+        # model = tamtam_client.models.new_message_body.NewMessageBody()  # noqa: E501
         pass
 
 

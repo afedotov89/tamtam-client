@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.photo_attachment_payload import PhotoAttachmentPayload  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestPhotoAttachmentPayload(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPhotoAttachmentPayload(unittest.TestCase):
     def testPhotoAttachmentPayload(self):
         """Test PhotoAttachmentPayload"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.photo_attachment_payload.PhotoAttachmentPayload()  # noqa: E501
+        # model = tamtam_client.models.photo_attachment_payload.PhotoAttachmentPayload()  # noqa: E501
         pass
 
 

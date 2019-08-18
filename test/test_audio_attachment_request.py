@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.audio_attachment_request import AudioAttachmentRequest  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestAudioAttachmentRequest(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestAudioAttachmentRequest(unittest.TestCase):
     def testAudioAttachmentRequest(self):
         """Test AudioAttachmentRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.audio_attachment_request.AudioAttachmentRequest()  # noqa: E501
+        # model = tamtam_client.models.audio_attachment_request.AudioAttachmentRequest()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# swagger_client.MessagesApi
+# tamtam_client.MessagesApi
 
 All URIs are relative to *https://botapi.tamtam.chat*
 
@@ -21,19 +21,19 @@ This method should be called to send an answer after a user has clicked the butt
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CallbackAnswer() # CallbackAnswer | 
+api_instance = tamtam_client.MessagesApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.CallbackAnswer() # CallbackAnswer | 
 callback_id = 'callback_id_example' # str | Identifies a button clicked by user. Bot receives this identifier after user pressed button as part of `MessageCallbackUpdate`
 
 try:
@@ -77,18 +77,18 @@ Deletes message in a dialog or in a chat if bot has permission to delete message
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.MessagesApi(tamtam_client.ApiClient(configuration))
 message_id = 'message_id_example' # str | Deleting message identifier
 
 try:
@@ -131,19 +131,19 @@ Updated message should be sent as `NewMessageBody` in a request body. In case `a
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.NewMessageBody() # NewMessageBody | 
+api_instance = tamtam_client.MessagesApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.NewMessageBody() # NewMessageBody | 
 message_id = 'message_id_example' # str | Editing message identifier
 
 try:
@@ -187,22 +187,22 @@ Returns messages in chat: result page and marker referencing to the next page. M
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-chat_id = swagger_client.Bigint() # Bigint | Chat identifier to get messages in chat (optional)
+api_instance = tamtam_client.MessagesApi(tamtam_client.ApiClient(configuration))
+chat_id = tamtam_client.Bigint() # Bigint | Chat identifier to get messages in chat (optional)
 message_ids = ['message_ids_example'] # list[str] | Messages ids you want to get (optional)
-_from = swagger_client.Bigint() # Bigint | Start time for requested messages (optional)
-to = swagger_client.Bigint() # Bigint | End time for requested messages (optional)
+_from = tamtam_client.Bigint() # Bigint | Start time for requested messages (optional)
+to = tamtam_client.Bigint() # Bigint | End time for requested messages (optional)
 count = 56 # int | Maximum amount of messages in response (optional)
 
 try:
@@ -249,19 +249,19 @@ Sends a message to a chat. As a result for this method new message identifier re
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.NewMessageBody() # NewMessageBody | 
+api_instance = tamtam_client.MessagesApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.NewMessageBody() # NewMessageBody | 
 user_id = 789 # int | Fill this parameter if you want to send message to user (optional)
 chat_id = 789 # int | Fill this if you send message to chat (optional)
 

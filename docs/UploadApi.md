@@ -1,4 +1,4 @@
-# swagger_client.UploadApi
+# tamtam_client.UploadApi
 
 All URIs are relative to *https://botapi.tamtam.chat*
 
@@ -17,19 +17,19 @@ Returns the URL for the subsequent file upload.  For example, you can upload it 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.UploadApi(swagger_client.ApiClient(configuration))
-type = swagger_client.UploadType() # UploadType | Uploaded file type: photo, audio, video, file
+api_instance = tamtam_client.UploadApi(tamtam_client.ApiClient(configuration))
+type = tamtam_client.UploadType() # UploadType | Uploaded file type: photo, audio, video, file
 
 try:
     # Get upload URL

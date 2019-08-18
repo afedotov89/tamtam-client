@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.sender_action import SenderAction  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestSenderAction(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSenderAction(unittest.TestCase):
     def testSenderAction(self):
         """Test SenderAction"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.sender_action.SenderAction()  # noqa: E501
+        # model = tamtam_client.models.sender_action.SenderAction()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.message_callback_update import MessageCallbackUpdate  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestMessageCallbackUpdate(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestMessageCallbackUpdate(unittest.TestCase):
     def testMessageCallbackUpdate(self):
         """Test MessageCallbackUpdate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.message_callback_update.MessageCallbackUpdate()  # noqa: E501
+        # model = tamtam_client.models.message_callback_update.MessageCallbackUpdate()  # noqa: E501
         pass
 
 

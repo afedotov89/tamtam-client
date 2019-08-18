@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.callback import Callback  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestCallback(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestCallback(unittest.TestCase):
     def testCallback(self):
         """Test Callback"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.callback.Callback()  # noqa: E501
+        # model = tamtam_client.models.callback.Callback()  # noqa: E501
         pass
 
 

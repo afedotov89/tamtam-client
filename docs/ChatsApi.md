@@ -1,4 +1,4 @@
-# swagger_client.ChatsApi
+# tamtam_client.ChatsApi
 
 All URIs are relative to *https://botapi.tamtam.chat*
 
@@ -25,19 +25,19 @@ Adds members to chat. Additional permissions may require.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.UserIdsList() # UserIdsList | 
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.UserIdsList() # UserIdsList | 
 chat_id = 789 # int | Chat identifier
 
 try:
@@ -81,19 +81,19 @@ Edits chat info: title, icon, etc…
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ChatPatch() # ChatPatch | 
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.ChatPatch() # ChatPatch | 
 chat_id = 789 # int | Chat identifier
 
 try:
@@ -137,18 +137,18 @@ Returns info about chat.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
 chat_id = 789 # int | Requested chat identifier
 
 try:
@@ -191,20 +191,20 @@ Returns information about chats that bot participated in: a result list and mark
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
 count = 56 # int | Number of chats requested (optional)
-marker = swagger_client.Bigint() # Bigint | Points to next data page. `null` for the first page (optional)
+marker = tamtam_client.Bigint() # Bigint | Points to next data page. `null` for the first page (optional)
 
 try:
     # Get all chats
@@ -247,18 +247,18 @@ Returns users participated in chat.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
 chat_id = 789 # int | Chat identifier
 user_ids = [56] # list[int] | *Since* version [0.1.4](#section/About/Changelog).  Comma-separated list of users identifiers to get their membership. When this parameter is passed, both `count` and `marker` are ignored (optional)
 marker = 789 # int | Marker (optional)
@@ -307,18 +307,18 @@ Returns chat membership info for current bot
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
 chat_id = 789 # int | Chat identifier
 
 try:
@@ -361,18 +361,18 @@ Removes bot from chat members.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
 chat_id = 789 # int | Chat identifier
 
 try:
@@ -415,18 +415,18 @@ Removes member from chat. Additional permissions may require.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
 chat_id = 789 # int | Chat identifier
 user_id = 789 # int | User id to remove from chat
 
@@ -471,19 +471,19 @@ Send bot action to chat
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ChatsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ActionRequestBody() # ActionRequestBody | 
+api_instance = tamtam_client.ChatsApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.ActionRequestBody() # ActionRequestBody | 
 chat_id = 789 # int | Chat identifier
 
 try:

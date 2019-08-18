@@ -23,7 +23,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import swagger_client 
+import tamtam_client 
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import swagger_client
+import tamtam_client
 ```
 
 ## Getting Started
@@ -47,19 +47,19 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BotsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.BotPatch() # BotPatch | 
+api_instance = tamtam_client.BotsApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.BotPatch() # BotPatch | 
 
 try:
     # Edit current bot info
@@ -69,13 +69,13 @@ except ApiException as e:
     print("Exception when calling BotsApi->edit_my_info: %s\n" % e)
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BotsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.BotsApi(tamtam_client.ApiClient(configuration))
 
 try:
     # Get current bot info

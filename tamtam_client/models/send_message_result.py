@@ -14,7 +14,7 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.message import Message  # noqa: F401,E501
+from tamtam_client.models.message import Message  # noqa: F401,E501
 
 
 class SendMessageResult(object):

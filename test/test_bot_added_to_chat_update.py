@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.bot_added_to_chat_update import BotAddedToChatUpdate  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestBotAddedToChatUpdate(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestBotAddedToChatUpdate(unittest.TestCase):
     def testBotAddedToChatUpdate(self):
         """Test BotAddedToChatUpdate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.bot_added_to_chat_update.BotAddedToChatUpdate()  # noqa: E501
+        # model = tamtam_client.models.bot_added_to_chat_update.BotAddedToChatUpdate()  # noqa: E501
         pass
 
 

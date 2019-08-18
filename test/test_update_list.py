@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.update_list import UpdateList  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestUpdateList(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestUpdateList(unittest.TestCase):
     def testUpdateList(self):
         """Test UpdateList"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.update_list.UpdateList()  # noqa: E501
+        # model = tamtam_client.models.update_list.UpdateList()  # noqa: E501
         pass
 
 

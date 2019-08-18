@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.sticker_attachment_request_payload import StickerAttachmentRequestPayload  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestStickerAttachmentRequestPayload(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestStickerAttachmentRequestPayload(unittest.TestCase):
     def testStickerAttachmentRequestPayload(self):
         """Test StickerAttachmentRequestPayload"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.sticker_attachment_request_payload.StickerAttachmentRequestPayload()  # noqa: E501
+        # model = tamtam_client.models.sticker_attachment_request_payload.StickerAttachmentRequestPayload()  # noqa: E501
         pass
 
 

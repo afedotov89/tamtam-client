@@ -14,7 +14,7 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.attachment_payload import AttachmentPayload  # noqa: F401,E501
+from tamtam_client.models.attachment_payload import AttachmentPayload  # noqa: F401,E501
 
 
 class StickerAttachmentPayload(AttachmentPayload):

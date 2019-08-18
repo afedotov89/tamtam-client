@@ -1,4 +1,4 @@
-# swagger_client.BotsApi
+# tamtam_client.BotsApi
 
 All URIs are relative to *https://botapi.tamtam.chat*
 
@@ -18,19 +18,19 @@ Edits current bot info. Fill only the fields you want to update. All remaining f
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BotsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.BotPatch() # BotPatch | 
+api_instance = tamtam_client.BotsApi(tamtam_client.ApiClient(configuration))
+body = tamtam_client.BotPatch() # BotPatch | 
 
 try:
     # Edit current bot info
@@ -72,18 +72,18 @@ Returns info about current bot. Current bot can be identified by access token. M
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import tamtam_client
+from tamtam_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: access_token
-configuration = swagger_client.Configuration()
+configuration = tamtam_client.Configuration()
 configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['access_token'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BotsApi(swagger_client.ApiClient(configuration))
+api_instance = tamtam_client.BotsApi(tamtam_client.ApiClient(configuration))
 
 try:
     # Get current bot info

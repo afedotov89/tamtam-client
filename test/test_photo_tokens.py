@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import tamtam_client
 from models.photo_tokens import PhotoTokens  # noqa: E501
-from swagger_client.rest import ApiException
+from tamtam_client.rest import ApiException
 
 
 class TestPhotoTokens(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPhotoTokens(unittest.TestCase):
     def testPhotoTokens(self):
         """Test PhotoTokens"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.photo_tokens.PhotoTokens()  # noqa: E501
+        # model = tamtam_client.models.photo_tokens.PhotoTokens()  # noqa: E501
         pass
 
 
