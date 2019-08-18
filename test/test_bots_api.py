@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from tamtam_client.bots_api import BotsApi  # noqa: E501
+from api.bots_api import BotsApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestBotsApi(unittest.TestCase):
     """BotsApi unit test stubs"""
 
     def setUp(self):
-        self.api = tamtam_client.bots_api.BotsApi()  # noqa: E501
+        self.api = api.bots_api.BotsApi()  # noqa: E501
 
     def tearDown(self):
         pass

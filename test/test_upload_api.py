@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from tamtam_client.upload_api import UploadApi  # noqa: E501
+from api.upload_api import UploadApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestUploadApi(unittest.TestCase):
     """UploadApi unit test stubs"""
 
     def setUp(self):
-        self.api = tamtam_client.upload_api.UploadApi()  # noqa: E501
+        self.api = api.upload_api.UploadApi()  # noqa: E501
 
     def tearDown(self):
         pass

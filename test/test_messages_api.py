@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from tamtam_client.messages_api import MessagesApi  # noqa: E501
+from api.messages_api import MessagesApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestMessagesApi(unittest.TestCase):
     """MessagesApi unit test stubs"""
 
     def setUp(self):
-        self.api = tamtam_client.messages_api.MessagesApi()  # noqa: E501
+        self.api = api.messages_api.MessagesApi()  # noqa: E501
 
     def tearDown(self):
         pass

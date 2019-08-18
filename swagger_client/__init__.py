@@ -15,11 +15,11 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
-from swagger_client.tamtam_client.bots_api import BotsApi
-from swagger_client.tamtam_client.chats_api import ChatsApi
-from swagger_client.tamtam_client.messages_api import MessagesApi
-from swagger_client.tamtam_client.subscriptions_api import SubscriptionsApi
-from swagger_client.tamtam_client.upload_api import UploadApi
+from swagger_client.api.bots_api import BotsApi
+from swagger_client.api.chats_api import ChatsApi
+from swagger_client.api.messages_api import MessagesApi
+from swagger_client.api.subscriptions_api import SubscriptionsApi
+from swagger_client.api.upload_api import UploadApi
 # import ApiClient
 from swagger_client.api_client import ApiClient
 from swagger_client.configuration import Configuration
