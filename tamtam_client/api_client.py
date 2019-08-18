@@ -57,6 +57,7 @@ class ApiClient(object):
         'date': datetime.date,
         'datetime': datetime.datetime,
         'object': object,
+        'Object': object,
     }
 
     def __init__(self, configuration=None, header_name=None, header_value=None,
