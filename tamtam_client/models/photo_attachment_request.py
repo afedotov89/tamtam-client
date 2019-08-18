@@ -31,10 +31,12 @@ class PhotoAttachmentRequest(AttachmentRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'type': 'str',
         'payload': 'Object'
     }
 
     attribute_map = {
+        'type': 'type',
         'payload': 'payload'
     }
 
