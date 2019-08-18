@@ -1,7 +1,5 @@
 # coding: utf-8
 
-# flake8: noqa
-
 """
     TamTam Bot API
 
@@ -14,101 +12,117 @@
 
 from __future__ import absolute_import
 
-# import apis into sdk package
-from swagger_client.tamtam_client.bots_api import BotsApi
-from swagger_client.tamtam_client.chats_api import ChatsApi
-from swagger_client.tamtam_client.messages_api import MessagesApi
-from swagger_client.tamtam_client.subscriptions_api import SubscriptionsApi
-from swagger_client.tamtam_client.upload_api import UploadApi
-# import ApiClient
+import re  # noqa: F401
+
+# python 2 and python 3 compatibility library
+import six
+
 from swagger_client.api_client import ApiClient
-from swagger_client.configuration import Configuration
-# import models into sdk package
-from swagger_client.models.action_request_body import ActionRequestBody
-from swagger_client.models.attachment import Attachment
-from swagger_client.models.attachment_payload import AttachmentPayload
-from swagger_client.models.attachment_request import AttachmentRequest
-from swagger_client.models.audio_attachment import AudioAttachment
-from swagger_client.models.audio_attachment_request import AudioAttachmentRequest
-from swagger_client.models.bigint import Bigint
-from swagger_client.models.bot_added_to_chat_update import BotAddedToChatUpdate
-from swagger_client.models.bot_command import BotCommand
-from swagger_client.models.bot_info import BotInfo
-from swagger_client.models.bot_patch import BotPatch
-from swagger_client.models.bot_removed_from_chat_update import BotRemovedFromChatUpdate
-from swagger_client.models.bot_started_update import BotStartedUpdate
-from swagger_client.models.button import Button
-from swagger_client.models.callback import Callback
-from swagger_client.models.callback_answer import CallbackAnswer
-from swagger_client.models.callback_button import CallbackButton
-from swagger_client.models.chat import Chat
-from swagger_client.models.chat_admin_permission import ChatAdminPermission
-from swagger_client.models.chat_list import ChatList
-from swagger_client.models.chat_member import ChatMember
-from swagger_client.models.chat_members_list import ChatMembersList
-from swagger_client.models.chat_patch import ChatPatch
-from swagger_client.models.chat_status import ChatStatus
-from swagger_client.models.chat_title_changed_update import ChatTitleChangedUpdate
-from swagger_client.models.chat_type import ChatType
-from swagger_client.models.contact_attachment import ContactAttachment
-from swagger_client.models.contact_attachment_payload import ContactAttachmentPayload
-from swagger_client.models.contact_attachment_request import ContactAttachmentRequest
-from swagger_client.models.contact_attachment_request_payload import ContactAttachmentRequestPayload
-from swagger_client.models.error import Error
-from swagger_client.models.file_attachment import FileAttachment
-from swagger_client.models.file_attachment_payload import FileAttachmentPayload
-from swagger_client.models.file_attachment_request import FileAttachmentRequest
-from swagger_client.models.get_subscriptions_result import GetSubscriptionsResult
-from swagger_client.models.image import Image
-from swagger_client.models.inline_keyboard_attachment import InlineKeyboardAttachment
-from swagger_client.models.inline_keyboard_attachment_request import InlineKeyboardAttachmentRequest
-from swagger_client.models.inline_keyboard_attachment_request_payload import InlineKeyboardAttachmentRequestPayload
-from swagger_client.models.intent import Intent
-from swagger_client.models.keyboard import Keyboard
-from swagger_client.models.link_button import LinkButton
-from swagger_client.models.linked_message import LinkedMessage
-from swagger_client.models.location_attachment import LocationAttachment
-from swagger_client.models.location_attachment_request import LocationAttachmentRequest
-from swagger_client.models.media_attachment_payload import MediaAttachmentPayload
-from swagger_client.models.message import Message
-from swagger_client.models.message_body import MessageBody
-from swagger_client.models.message_callback_update import MessageCallbackUpdate
-from swagger_client.models.message_created_update import MessageCreatedUpdate
-from swagger_client.models.message_edited_update import MessageEditedUpdate
-from swagger_client.models.message_link_type import MessageLinkType
-from swagger_client.models.message_list import MessageList
-from swagger_client.models.message_removed_update import MessageRemovedUpdate
-from swagger_client.models.message_stat import MessageStat
-from swagger_client.models.new_message_body import NewMessageBody
-from swagger_client.models.new_message_link import NewMessageLink
-from swagger_client.models.photo_attachment import PhotoAttachment
-from swagger_client.models.photo_attachment_payload import PhotoAttachmentPayload
-from swagger_client.models.photo_attachment_request import PhotoAttachmentRequest
-from swagger_client.models.photo_attachment_request_payload import PhotoAttachmentRequestPayload
-from swagger_client.models.photo_token import PhotoToken
-from swagger_client.models.photo_tokens import PhotoTokens
-from swagger_client.models.recipient import Recipient
-from swagger_client.models.request_contact_button import RequestContactButton
-from swagger_client.models.request_geo_location_button import RequestGeoLocationButton
-from swagger_client.models.send_message_result import SendMessageResult
-from swagger_client.models.sender_action import SenderAction
-from swagger_client.models.share_attachment import ShareAttachment
-from swagger_client.models.simple_query_result import SimpleQueryResult
-from swagger_client.models.sticker_attachment import StickerAttachment
-from swagger_client.models.sticker_attachment_payload import StickerAttachmentPayload
-from swagger_client.models.sticker_attachment_request import StickerAttachmentRequest
-from swagger_client.models.sticker_attachment_request_payload import StickerAttachmentRequestPayload
-from swagger_client.models.subscription import Subscription
-from swagger_client.models.subscription_request_body import SubscriptionRequestBody
-from swagger_client.models.update import Update
-from swagger_client.models.update_list import UpdateList
-from swagger_client.models.upload_endpoint import UploadEndpoint
-from swagger_client.models.upload_type import UploadType
-from swagger_client.models.uploaded_info import UploadedInfo
-from swagger_client.models.user import User
-from swagger_client.models.user_added_to_chat_update import UserAddedToChatUpdate
-from swagger_client.models.user_ids_list import UserIdsList
-from swagger_client.models.user_removed_from_chat_update import UserRemovedFromChatUpdate
-from swagger_client.models.user_with_photo import UserWithPhoto
-from swagger_client.models.video_attachment import VideoAttachment
-from swagger_client.models.video_attachment_request import VideoAttachmentRequest
+
+
+class UploadApi(object):
+    """NOTE: This class is auto generated by the swagger code generator program.
+
+    Do not edit the class manually.
+    Ref: https://github.com/swagger-api/swagger-codegen
+    """
+
+    def __init__(self, api_client=None):
+        if api_client is None:
+            api_client = ApiClient()
+        self.api_client = api_client
+
+    def get_upload_url(self, type, **kwargs):  # noqa: E501
+        """Get upload URL  # noqa: E501
+
+        Returns the URL for the subsequent file upload.  For example, you can upload it via curl:  ```curl -i -X POST   -H \"Content-Type: multipart/form-data\"   -F \"data=@movie.mp4\" \"%UPLOAD_URL%\"```  Two types of an upload are supported: - single request upload (multipart request) - and resumable upload.  ##### Multipart upload This type of upload is a simpler one but it is less reliable and agile. If a `Content-Type`: multipart/form-data header is passed in a request our service indicates upload type as a simple single request upload.  This type of an upload has some restrictions:  - Max. file size - 2 Gb - Only one file per request can be uploaded - No possibility to restart stopped / failed upload  ##### Resumable upload If `Content-Type` header value is not equal to `multipart/form-data` our service indicated upload type as a resumable upload. With a `Content-Range` header current file chunk range and complete file size can be passed. If a network error has happened or upload was stopped you can continue to upload a file from the last successfully uploaded file chunk. You can request the last known byte of uploaded file from server and continue to upload a file.  ##### Get upload status To GET an upload status you simply need to perform HTTP-GET request to a file upload URL. Our service will respond with current upload status, complete file size and last known uploaded byte. This data can be used to complete stopped upload if something went wrong. If `REQUESTED_RANGE_NOT_SATISFIABLE` or `INTERNAL_SERVER_ERROR` status was returned it is a good point to try to restart an upload  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_upload_url(type, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UploadType type: Uploaded file type: photo, audio, video, file (required)
+        :return: UploadEndpoint
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_upload_url_with_http_info(type, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_upload_url_with_http_info(type, **kwargs)  # noqa: E501
+            return data
+
+    def get_upload_url_with_http_info(self, type, **kwargs):  # noqa: E501
+        """Get upload URL  # noqa: E501
+
+        Returns the URL for the subsequent file upload.  For example, you can upload it via curl:  ```curl -i -X POST   -H \"Content-Type: multipart/form-data\"   -F \"data=@movie.mp4\" \"%UPLOAD_URL%\"```  Two types of an upload are supported: - single request upload (multipart request) - and resumable upload.  ##### Multipart upload This type of upload is a simpler one but it is less reliable and agile. If a `Content-Type`: multipart/form-data header is passed in a request our service indicates upload type as a simple single request upload.  This type of an upload has some restrictions:  - Max. file size - 2 Gb - Only one file per request can be uploaded - No possibility to restart stopped / failed upload  ##### Resumable upload If `Content-Type` header value is not equal to `multipart/form-data` our service indicated upload type as a resumable upload. With a `Content-Range` header current file chunk range and complete file size can be passed. If a network error has happened or upload was stopped you can continue to upload a file from the last successfully uploaded file chunk. You can request the last known byte of uploaded file from server and continue to upload a file.  ##### Get upload status To GET an upload status you simply need to perform HTTP-GET request to a file upload URL. Our service will respond with current upload status, complete file size and last known uploaded byte. This data can be used to complete stopped upload if something went wrong. If `REQUESTED_RANGE_NOT_SATISFIABLE` or `INTERNAL_SERVER_ERROR` status was returned it is a good point to try to restart an upload  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_upload_url_with_http_info(type, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UploadType type: Uploaded file type: photo, audio, video, file (required)
+        :return: UploadEndpoint
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['type']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_upload_url" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_upload_url`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'type' in params:
+            query_params.append(('type', params['type']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/uploads', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='UploadEndpoint',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)

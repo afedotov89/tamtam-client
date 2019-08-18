@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from api.chats_api import ChatsApi  # noqa: E501
+from tamtam_client.chats_api import ChatsApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestChatsApi(unittest.TestCase):
     """ChatsApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.chats_api.ChatsApi()  # noqa: E501
+        self.api = tamtam_client.chats_api.ChatsApi()  # noqa: E501
 
     def tearDown(self):
         pass

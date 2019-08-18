@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from api.subscriptions_api import SubscriptionsApi  # noqa: E501
+from tamtam_client.subscriptions_api import SubscriptionsApi  # noqa: E501
 from swagger_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestSubscriptionsApi(unittest.TestCase):
     """SubscriptionsApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.subscriptions_api.SubscriptionsApi()  # noqa: E501
+        self.api = tamtam_client.subscriptions_api.SubscriptionsApi()  # noqa: E501
 
     def tearDown(self):
         pass
