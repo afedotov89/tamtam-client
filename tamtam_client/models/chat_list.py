@@ -92,8 +92,8 @@ class ChatList(object):
         :param marker: The marker of this ChatList.  # noqa: E501
         :type: int
         """
-        if marker is None:
-            raise ValueError("Invalid value for `marker`, must not be `None`")  # noqa: E501
+        # if marker is None:
+        #     raise ValueError("Invalid value for `marker`, must not be `None`")  # noqa: E501
 
         self._marker = marker
 
