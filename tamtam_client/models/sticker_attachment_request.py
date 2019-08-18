@@ -15,7 +15,6 @@ import re  # noqa: F401
 
 import six
 from tamtam_client.models.attachment_request import AttachmentRequest  # noqa: F401,E501
-from tamtam_client.models.object import Object  # noqa: F401,E501
 
 
 class StickerAttachmentRequest(AttachmentRequest):

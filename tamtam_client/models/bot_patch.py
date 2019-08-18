@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 from tamtam_client.models.bot_command import BotCommand  # noqa: F401,E501
-from tamtam_client.models.object import Object  # noqa: F401,E501
+
 
 
 class BotPatch(object):
