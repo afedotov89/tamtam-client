@@ -154,8 +154,8 @@ class NewMessageBody(object):
         :param link: The link of this NewMessageBody.  # noqa: E501
         :type: object
         """
-        if link is None:
-            raise ValueError("Invalid value for `link`, must not be `None`")  # noqa: E501
+        # if link is None:
+        #     raise ValueError("Invalid value for `link`, must not be `None`")  # noqa: E501
 
         self._link = link
 
