@@ -40,9 +40,11 @@ Use PrimeBot to create and edit your bots. Feel free to contact us for any quest
 All strings are UTF-8 encoded. Date/time fields are represented as the number of milliseconds that have elapsed since 00:00 January 1, 1970 in the long format. To get it, you can simply multiply the UNIX timestamp by 1000. All date/time fields have a UTC timezone. 
 ## Error responses In case of an error, the API returns a response with the corresponding HTTP code and JSON with the following fields:  
 `code` - the string with the error key   
-`message` - a string describing the error </br>  For example: 
+`message` - a string describing the error </br>  
 
->http https://botapi.tamtam.chat/chats?access_token={EXAMPLE_TOKEN} 
+For example: 
+```bash
+http https://botapi.tamtam.chat/chats?access_token={EXAMPLE_TOKEN} 
 HTTP / 1.1 403 Forbidden 
 Cache-Control: no-cache 
 Connection: Keep-Alive 
@@ -53,7 +55,7 @@ Set-Cookie: web_ui_lang = ru;
 Path = /; 
 Domain = .tamtam.chat; 
 Expires = 2019-03-24T11: 45: 36.500Z {\"code\": \"verify.token\", \"message\": \"Invalid access_token\"} 
- 
+``` 
 ## Receiving Notifications TamTam Bot API supports 2 options of receiving notifications on new dialog events for bots: 
 - Push notifications via WebHook. To receive data via WebHook, you'll have to [add subscription](https://dev.tamtam.chat/#operation/subscribe); 
 - Notifications upon request via [long polling](#operation/getUpdates) API. All data can be received via long polling **by default** after creating the bot,  Both methods **cannot** be used simultaneously. Refer to the response schema of [/updates](https://dev.tamtam.chat/#operation/getUpdates) method to check all available types of updates.  
