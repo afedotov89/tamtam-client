@@ -41,13 +41,19 @@ All strings are UTF-8 encoded. Date/time fields are represented as the number of
 ## Error responses In case of an error, the API returns a response with the corresponding HTTP code and JSON with the following fields:  
 `code` - the string with the error key   
 `message` - a string describing the error </br>  For example: 
-```bash 
-> http https://botapi.tamtam.chat/chats?access_token={EXAMPLE_TOKEN} 
-HTTP / 1.1 403 Forbidden Cache-Control: no-cache Connection: Keep-Alive Content-Length: 57 Content-Type: application / json;
-charset = utf-8 Set-Cookie: web_ui_lang = ru; Path = /; 
+
+>http https://botapi.tamtam.chat/chats?access_token={EXAMPLE_TOKEN} 
+HTTP / 1.1 403 Forbidden 
+Cache-Control: no-cache 
+Connection: Keep-Alive 
+Content-Length: 57 
+Content-Type: application/json;
+charset = utf-8 
+Set-Cookie: web_ui_lang = ru; 
+Path = /; 
 Domain = .tamtam.chat; 
-Expires = 2019-03-24T11: 45: 36.500Z {    \"code\": \"verify.token\",    \"message\": \"Invalid access_token\" } 
-``` 
+Expires = 2019-03-24T11: 45: 36.500Z {\"code\": \"verify.token\", \"message\": \"Invalid access_token\"} 
+ 
 ## Receiving Notifications TamTam Bot API supports 2 options of receiving notifications on new dialog events for bots: 
 - Push notifications via WebHook. To receive data via WebHook, you'll have to [add subscription](https://dev.tamtam.chat/#operation/subscribe); 
 - Notifications upon request via [long polling](#operation/getUpdates) API. All data can be received via long polling **by default** after creating the bot,  Both methods **cannot** be used simultaneously. Refer to the response schema of [/updates](https://dev.tamtam.chat/#operation/getUpdates) method to check all available types of updates.  
